@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Haven | Support & Feedback</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="Feedback.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Toy Haven Logo">
+      </a>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Product-Listing.html">Products</a>
+      <a href="Shopping-Cart.html">Cart</a>
+      <a href="Wishlist.html">Wishlist</a>
+      <a href="Feedback.html" class="active">Support</a>
+    </nav>
+    <button type="button" class="hamburger" id="hamburger" aria-label="Toggle Navigation" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+  <main class="feedback-main">
+    <h1>Support & Feedback</h1>
+    
+    <div class="feedback-layout">
+      <!-- Feedback Form Section -->
+      <section class="feedback-form-section" aria-label="Feedback Form">
+        <h2>Send Us Your Feedback</h2>
+        <form id="feedbackForm" novalidate>
+          <div class="form-group">
+            <label for="feedbackName">Full Name</label>
+            <input type="text" id="feedbackName" placeholder="Enter your full name" required>
+            <span class="error-msg" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="feedbackEmail">Email Address</label>
+            <input type="email" id="feedbackEmail" placeholder="Enter your email" required>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="feedbackMessage">Message</label>
+            <textarea id="feedbackMessage" rows="4" placeholder="How can we help you?" required></textarea>
+            <span class="error-msg" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+        <p id="formSuccessMsg" class="success-msg" style="display: none;"></p>
+      </section>
+
+      <!-- FAQ Accordion Section -->
+      <section class="faq-section" aria-label="Frequently Asked Questions">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">How long does shipping take?</button>
+            <div class="accordion-content">
+              <p>Standard shipping typically takes 3 to 5 business days within the region.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">What is your return policy?</button>
+            <div class="accordion-content">
+              <p>You can return any unopened toy within 30 days of purchase for a full refund.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">How do I track my order?</button>
+            <div class="accordion-content">
+              <p>Once your order is confirmed, tracking details will be sent directly to your email address.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Product-Listing.html">Products</a></li>
+          <li><a href="Shopping-Cart.html">Cart</a></li>
+          <li><a href="Wishlist.html">Wishlist</a></li>
+          <li><a href="Feedback.html">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h2>Subscribe to Newsletter</h2>
+        <form id="newsletterForm">
+          <label for="newsletterEmail" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p id="newsletterMsg"></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Toy Haven. All rights reserved.</p>
+  </footer>
+
+  <script src="Feedback.js"></script>
+</body>
+</html>

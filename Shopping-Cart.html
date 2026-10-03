@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Haven | Shopping Cart</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="Shopping-Cart.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Toy Haven Logo">
+      </a>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Product-Listing.html">Products</a>
+      <a href="Shopping-Cart.html" class="active">Cart</a>
+      <a href="Wishlist.html">Wishlist</a>
+      <a href="Feedback.html">Support</a>
+    </nav>
+    <button type="button" class="hamburger" id="hamburger" aria-label="Toggle Navigation" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+  <main class="cart-main">
+    <h1>Your Shopping Cart</h1>
+    
+    <div class="cart-layout">
+      <!-- Cart Items List Container -->
+      <section class="cart-items-section" aria-label="Cart Items">
+        <div id="cartItemsContainer">
+          <!-- Dynamically populated via JavaScript -->
+        </div>
+      </section>
+
+      <!-- Cart Summary Section -->
+      <section class="cart-summary-section" aria-label="Cart Summary">
+        <h2>Order Summary</h2>
+        <div class="summary-details">
+          <p>Total Items: <span id="summaryTotalItems">0</span></p>
+          <p class="summary-total">Total Price: <span id="summaryTotalPrice">$0.00</span></p>
+        </div>
+        <div class="summary-buttons">
+          <button type="button" class="btn btn-clear" id="clearCartBtn">Clear Cart</button>
+          <button type="button" class="btn btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Product-Listing.html">Products</a></li>
+          <li><a href="Shopping-Cart.html">Cart</a></li>
+          <li><a href="Wishlist.html">Wishlist</a></li>
+          <li><a href="Feedback.html">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h2>Subscribe to Newsletter</h2>
+        <form id="newsletterForm">
+          <label for="newsletterEmail" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p id="newsletterMsg"></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Toy Haven. All rights reserved.</p>
+  </footer>
+
+  <script src="Shopping-Cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Haven | Product Listing</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="Product-Listing.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Toy Haven Logo">
+      </a>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="Product-Listing.html" class="active">Products</a>
+      <a href="Shopping-Cart.html">Cart</a>
+      <a href="Wishlist.html">Wishlist</a>
+      <a href="Feedback.html">Support</a>
+    </nav>
+    <button type="button" class="hamburger" id="hamburger" aria-label="Toggle Navigation" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- Search and Filter Controls -->
+    <section class="controls-section" aria-label="Product Search and Filter Controls">
+      <div class="controls-container">
+        <label for="searchInput" class="visually-hidden">Search products by name</label>
+        <input type="text" id="searchInput" placeholder="Search product name...">
+        
+        <label for="categoryFilter" class="visually-hidden">Filter by category</label>
+        <select id="categoryFilter">
+          <option value="All">All Categories</option>
+          <option value="Figurines">Figurines</option>
+          <option value="Toys">Toys</option>
+          <option value="Board Games">Board Games</option>
+          <option value="Diecast Cars">Diecast Cars</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Product Listing Grid -->
+    <section class="product-section">
+      <h1>Our Products</h1>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+  </main>
+
+  <!-- Product Details Modal -->
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button type="button" class="close-btn" id="closeModalBtn" aria-label="Close details">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Product-Listing.html">Products</a></li>
+          <li><a href="Shopping-Cart.html">Cart</a></li>
+          <li><a href="Wishlist.html">Wishlist</a></li>
+          <li><a href="Feedback.html">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h2>Subscribe to Newsletter</h2>
+        <form id="newsletterForm">
+          <label for="newsletterEmail" class="visually-hidden">Email Address</label>
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p id="newsletterMsg"></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Toy Haven. All rights reserved.</p>
+  </footer>
+
+  <script src="Product-Listing.js"></script>
+</body>
+</html>
